@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shravan Avyukta</title>
+<meta name="description" content="Shravan Avyukta — product manager and founder. Building mettle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0e0c;
+    --fg: #f2ede3;
+    --muted: #8a8378;
+    --accent: #c8643c;
+    --line: rgba(242, 237, 227, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-font-smoothing: antialiased; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'IBM Plex Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    line-height: 1.5;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .status {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2.8rem, 11vw, 4.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  .intro {
+    color: var(--muted);
+    font-size: 0.92rem;
+    max-width: 30rem;
+    margin-bottom: 3rem;
+  }
+
+  .intro strong {
+    color: var(--fg);
+    font-weight: 500;
+  }
+
+  .links {
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .links li { border-bottom: 1px solid var(--line); }
+
+  .links a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.05rem 0.25rem;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: padding-left 0.22s ease, color 0.22s ease;
+  }
+
+  .links a:hover,
+  .links a:focus-visible {
+    padding-left: 1rem;
+    color: var(--accent);
+    outline: none;
+  }
+
+  .links .label { font-weight: 500; }
+
+  .links .meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .links a:hover .meta,
+  .links a:focus-visible .meta { color: var(--accent); }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dot { animation: none; }
+    .links a { transition: color 0.22s ease; }
+    .links a:hover { padding-left: 0.25rem; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="status"><span class="dot"></span>Site coming soon</div>
+
+    <h1>Shravan<br>Avyukta</h1>
+
+    <p class="intro">
+      Product manager and founder. Currently all-in on <strong>mettle</strong>.
+      A fuller site is on the way — in the meantime, here's everything I'm building.
+    </p>
+
+    <ul class="links">
+      <li>
+        <a href="https://withmettle.com" target="_blank" rel="noopener">
+          <span class="label">mettle</span>
+          <span class="meta">Founder · SaaS for studios</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://resumepuppy.com" target="_blank" rel="noopener">
+          <span class="label">ResumePuppy</span>
+          <span class="meta">Founding partner</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/shravanavyukta/" target="_blank" rel="noopener">
+          <span class="label">LinkedIn</span>
+          <span class="meta">Background · Connect</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/shravanavyukta" target="_blank" rel="noopener">
+          <span class="label">GitHub</span>
+          <span class="meta">Code</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>© <span id="year"></span> Shravan Avyukta</footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
